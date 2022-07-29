@@ -1,0 +1,14 @@
+import { TodoItem } from "./TodoItem"
+
+export const TodosList = ({todos , handleDeleteTodo , onToggleTodo}) => {
+  return (
+    <ul className="list-group">
+       {
+         todos.map( todo =>(<TodoItem key={todo.id} todo= {todo} handleDeleteTodo = {handleDeleteTodo} onToggleTodo = {onToggleTodo} />))
+       }
+       
+    
+    </ul>
+
+  )
+}
